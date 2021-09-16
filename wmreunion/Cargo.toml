@@ -1,0 +1,11 @@
+[package]
+name = "wmreunion"
+version = "0.1.0"
+edition = "2018"
+authors = ["Aalekh Patel <aalekh.gwpeck.7998@icloud.com>"]
+description = "A JavaScript (WASM) API for the Rust backend of `reunion`, i.e. a Union-Find w/ Rank data structure for JavaScript that runs WebAssembly."
+license-file = "LICENSE"
+documentation = "https://www.github.com/aalekhpatel07/reunion-api/blob/master/README.md"
+repository = "https://www.github.com/aalekhpatel07/reunion-api"
+
+[dependencies]
