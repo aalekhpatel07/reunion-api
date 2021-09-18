@@ -9,3 +9,8 @@ documentation = "https://www.github.com/aalekhpatel07/reunion-api/blob/master/RE
 repository = "https://www.github.com/aalekhpatel07/reunion-api"
 
 [dependencies]
+pyo3 = { version = "0.14", features=["extension-module", "hashbrown", "macros"] }
+reunion = { version = "0.1" }
+
+[lib]
+crate-type = ["cdylib", "rlib"]
