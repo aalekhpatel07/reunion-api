@@ -1,18 +1,17 @@
-use reunion::{UnionFind as UnionFindRust, UnionFindTrait as UnionFindTrait};
 use pyo3::prelude::*;
-use std::collections::{HashSet, HashMap};
+use reunion::{UnionFind as UnionFindRust, UnionFindTrait};
+use std::collections::{HashMap, HashSet};
 use std::fmt;
 
 #[pyclass]
 #[pyo3(text_signature = "(/)")]
 #[derive(Debug, Clone)]
 struct UnionFind {
-    _inner: UnionFindRust<u64>
+    _inner: UnionFindRust<u64>,
 }
 
 #[pymethods]
 impl UnionFind {
-
     /// Create an instance of UnionFind data structure.
     /// # Example
     /// .. jupyter-execute::
@@ -23,7 +22,7 @@ impl UnionFind {
     #[new]
     fn new() -> Self {
         UnionFind {
-            _inner: UnionFindRust::<u64>::new()
+            _inner: UnionFindRust::<u64>::new(),
         }
     }
 
@@ -64,7 +63,7 @@ impl UnionFind {
     }
 
     fn str(&self) -> String {
-        format!("{}", self._inner).to_owned()
+        format!("{}", self._inner)
     }
 }
 
