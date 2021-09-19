@@ -37,54 +37,59 @@ Then, union a few elements and capture the state of the data structure after tha
 *Solution*: 
 
 ```python
-
 import pyreunion
 
 
 def main():
 
-    	# Create an empty UnionFind data structure.
-	uf = pyreunion.UnionFind()
+    # Create an empty UnionFind data structure.
+    uf = pyreunion.UnionFind()
 
-	print("Initial state:", uf.str())
-	print("All elements form their own group (singletons).")
-	print(uf1.subsets())
+    print("Initial state:", uf.str())
+    print("All elements form their own group (singletons).")
+    print(uf.subsets())
 
-	uf.union(2, 1)
-	print("After combining the groups that contains 2 and 1:", uf)
+    uf.union(2, 1)
+    print("After combining the groups that contains 2 and 1:", uf.str())
 
-	uf.union(4, 3)
-	print("After combining the groups that contains 4 and 3:", uf)
+    uf.union(4, 3)
+    print("After combining the groups that contains 4 and 3:", uf.str())
 
-	uf.union(6, 5)
-	print("After combining the groups that contains 6 and 5:", uf)
+    uf.union(6, 5)
+    print("After combining the groups that contains 6 and 5:", uf.str())
 
-	hs1 = {1, 2}
-	hs2 = {3, 4}
-	hs3 = {5, 6}
+    hs1 = {1, 2}
+    hs2 = {3, 4}
+    hs3 = {5, 6}
 
-	subsets = uf.subsets()
-	assert (len(subsets) == 3)
+    subsets = uf.subsets()
+    assert (len(subsets) == 3)
 
-	assert (hs1 in subsets)
-	assert (hs2 in subsets)
-	assert (hs3 in subsets)
+    assert (hs1 in subsets)
+    assert (hs2 in subsets)
+    assert (hs3 in subsets)
 
-	uf.union(1, 5)
+    uf.union(1, 5)
 
-	print("After combining the groups that contains 1 and 5", uf)
+    print("After combining the groups that contains 1 and 5", uf.str())
 
-	subsets = uf.subsets()
-	assert (subsets.len() == 2)
+    subsets = uf.subsets()
+    assert (len(subsets) == 2)
 
-	hs3.extend(hs1)
+    for x in hs1:
+        hs3.add(x)
 
-	assert (hs3 in subsets)
-	assert (hs2 in subsets)
+    assert (hs3 in subsets)
+    assert (hs2 in subsets)
 
-    	# It is possible to iterate over the subsets.
-    	for partition in uf:
-		print(partition)
+    # It is possible to iterate over the subsets.
+    for partition in uf.subsets():
+        print(partition)
+
+
+if __name__ == '__main__':
+    main()
+
 ```
 
 ## Performance
