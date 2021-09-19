@@ -1,4 +1,3 @@
-# PyReunion and WmReunion
+# PyReunion and ReunionJs
 
-Python and JS (WASM) frontend for Rust backend for the crate `reunion`.
-
+Python and JS (WASM) frontend for the Rust backend of the crate `reunion`.
