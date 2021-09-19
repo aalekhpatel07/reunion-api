@@ -1,0 +1,26 @@
+[project]
+name = "pyreunion"
+version = "0.1.2"
+description = "A Python API for the Rust backend of `reunion`, i.e. a Union-Find w/ Rank data structure for Python."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+keywords = ["Union Find", "Algorithms", "Data Structures", "Disjoint Set"]
+authors = [
+	{name = "Aalekh Patel", email = "aalekh.gwpeck.7998@icloud.com"}
+]
+maintainers = [
+	{name = "Aalekh Patel", email = "aalekh.gwpeck.7998@icloud.com"}
+]
+
+classifiers = [
+	"Programming Language :: Python"
+]
+
+[build-system]
+requires = []
+build-backend = "maturin"
+#[project.urls]
+#homepage = "https://www.github.com/aalekhpatel07/reunion-api"
+#documentation = "https://www.github.com/aalekhpatel07/reunion-api"
+#repository = "https://www.github.com/aalekhpatel07/reunion-api"
