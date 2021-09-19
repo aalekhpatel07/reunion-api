@@ -2,7 +2,7 @@
 
 members = [
 	"pyreunion",
-	"wmreunion"
+	"reunionjs",
 ]
 
 [profile.dev]
@@ -17,3 +17,4 @@ lto = "fat"
 debug = true
 codegen-units = 1
 lto = "fat"
+opt-level = "s"
