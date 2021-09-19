@@ -56,9 +56,9 @@ function exploreUnionFind() {
     uf.union(BigInt(6), BigInt(5));
     console.log("After combining the groups that contains 6 and 5:", uf.str());
 
-    let hs1 = new Set([1, 2]);
-    let hs2 = new Set([3, 4]);
-    let hs3 = new Set([5, 6]);
+    let hs1 = new Set([BigInt(1), BigInt(2)]);
+    let hs2 = new Set([BigInt(3), BigInt(4)]);
+    let hs3 = new Set([BigInt(5), BigInt(6)]);
 
     let subsets = uf.subsets();
     console.assert(subsets.length == 3);

@@ -3,6 +3,7 @@ use wasm_bindgen::prelude::*;
 use serde::{Serialize, Deserialize};
 
 
+#[wasm_bindgen]
 pub fn set_panic_hook() {
     // When the `console_error_panic_hook` feature is enabled, we can call the
     // `set_panic_hook` function at least once during initialization, and then
@@ -55,9 +56,10 @@ impl UnionFind {
     /// Get the mapping between entry and its parents.
     pub fn parents(&self) -> JsValue { JsValue::from_serde(&self._inner.parents.clone()).unwrap() }
 
+    /// Get a string representation of the underlying data structure.
     pub fn str(&self) -> String { format!("{}", self._inner) }
 
-    // Read the data structure from JS.
+    /// Read the data structure from JS.
     pub fn read(val: &JsValue) -> Self { val.into_serde().unwrap() }
 }
 
